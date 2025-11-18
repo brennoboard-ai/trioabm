@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Livro do Trio ABM</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #2a1f0f, #0d0a07);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: "Garamond", serif;
+}
+
+#cover {
+    position: absolute;
+    width: 420px;
+    height: 600px;
+    background: linear-gradient(135deg, #caa34d, #8d6b25);
+    border: 6px solid #d4b76f;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 1.5s ease-in-out, opacity 1s;
+    z-index: 10;
+}
+
+#cover h1 {
+    color: white;
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px gold;
+}
+
+.book {
+    width: 850px;
+    height: 600px;
+    display: none;
+    opacity: 0;
+    transition: opacity 1.5s;
+    position: relative;
+}
+
+.page {
+    width: 420px;
+    height: 600px;
+    background: #f3e7c1;
+    border-radius: 4px;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.3);
+    padding: 40px;
+    overflow-y: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.magic {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: gold;
+    border-radius: 50%;
+    box-shadow: 0 0 10px gold;
+    animation: sparkle 4s infinite ease-in-out;
+    opacity: 0.7;
+}
+
+@keyframes sparkle {
+    0% { transform: translateY(0) scale(0.8); opacity: 1; }
+    100% { transform: translateY(800px) scale(0); opacity: 0; }
+}
+
+p { margin-bottom: 18px; }
+.photo {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" src="where_have_you_been.mp3"></audio>
+
+<div id="cover" onclick="openBook()">
+    <h1>Livro do Trio ABM</h1>
+</div>
+
+<script>
+for (let i=0; i<40; i++) {
+    let star = document.createElement("div");
+    star.classList.add("magic");
+    star.style.left = Math.random()*100 + "vw";
+    star.style.animationDelay = Math.random()*4 + "s";
+    document.body.appendChild(star);
+}
+</script>
+
+<div id="book" class="book">
+
+    <div class="page">
+<p><b>Trio ABM,</b></p>
+
+<p>Gente… às vezes eu paro e percebo que a gente realmente viveu uma história. Não foi só amizade. Não foi só coleguismo de sala. Não foi só convivência. Foi trajetória. Foi crescimento. Foi bagunça, foi caos, foi amor, foi briga, foi choro, foi cuidado, foi tudo ao mesmo tempo. Foram três anos sendo o que ninguém mais conseguiu ser: um trio que sobreviveu ao Ensino Médio inteiro — e isso não é pouca coisa.</p>
+
+<p>Quando a gente entrou lá em 2023, ninguém imaginava que aquele começo meio perdido, meio confuso, iria virar o ABM 🩷💚💜. E virou. Virou nas conversas idiotas, nas brigas que só duravam uma semana no máximo, nas reconciliações que sempre chegavam, nos detalhes que só quem viveu entende. A verdade é que nós três crescemos juntos. A gente mudou junto. A gente amadureceu junto.</p>
+
+<img src="photo1.jpg" class="photo">
+    </div>
+
+    <div class="page">
+<p>E nesse meio tempo, a gente viveu tudo: Agroleite, gruta, Colombo, vinícola, hidroponia… viagens, histórias, fotos que guardam mais emoções do que a gente consegue explicar. Momentos que talvez, daqui a alguns anos, vão bater na memória e dar aquela saudade que aperta, mas ao mesmo tempo aquece o coração. Porque foram reais. Foram nossos.</p>
+
+<p>E apesar de brigas, surtos, dias ruins, fases estranhas… a gente nunca deixou de voltar um pro outro. Isso pra mim é o que define o trio ABM: não é perfeição, é voltar. Sempre voltar. Sempre ter onde cair. Sempre ter com quem rir. Sempre ter quem entender, mesmo sem concordar.</p>
+
+<p>E agora, no final do 3º ano, bate aquela sensação estranha… uma mistura de final de capítulo com o medo do que vem depois. Porque vai vir mudança. Vai vir distância. Vai vir rotina nova. Vai vir vida adulta batendo na porta. E talvez cada um siga pra um lado. E talvez a gente não consiga se ver tanto. Mas nada disso apaga o que já foi.</p>
+
+<p>O trio ABM não é só presente. É história. É memória. É parte do que cada um vai carregar daqui pra frente.</p>
+
+<p>Eu só quero agradecer vocês duas. Por me aguentarem, por rirem comigo, por brigarem comigo, por me corrigirem, por me zoarem, por estarem ali — do jeitinho de vocês. Aghata com a delicadeza e o brilho dela. Maria com a força e a sinceridade que só ela tem. E eu ali no meio, meio bagunçado, meio exagerado, mas sempre feliz de ter vocês duas.</p>
+
+<p>Se um dia a vida separar nossos caminhos, que ela nunca apague nossa história. Que a gente olhe pra trás e pense:<br><b>“Caramba. Valeu a pena. Valeu cada minuto.”</b></p>
+
+<p><b>ABM pra sempre.</b><br>Não por obrigação.<br>Mas porque marcou.<br>Porque foi verdadeiro.<br>Porque foi nosso.<br><br>🩷💚💜</p>
+
+<img src="photo2.jpg" class="photo">
+    </div>
+
+</div>
+
+<script>
+function openBook() {
+    let cover = document.getElementById("cover");
+    let book = document.getElementById("book");
+    let music = document.getElementById("music");
+
+    cover.style.transform = "scale(0) rotateY(180deg)";
+    cover.style.opacity = "0";
+
+    setTimeout(() => {
+        cover.style.display = "none";
+        book.style.display = "flex";
+        setTimeout(() => book.style.opacity = "1", 100);
+    }, 1500);
+
+    music.play();
+}
+</script>
+
+</body>
+</html>
